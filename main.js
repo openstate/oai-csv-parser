@@ -142,9 +142,9 @@ var checkHeader = function(headerrow){
 
 
 function addRecord(row){
-
+	var id = row[0];
 	//check for identifier
-	if(row[0].length > 0)	{
+	if(id.length < 1)	{
 		return false;
 	}
 
@@ -163,8 +163,8 @@ function addRecord(row){
 		var colNum = headerData.headerfields[i];
 		var prop = headerData.firstrow[colNum];
 		var value = row[colNum];
-
-		textblob += '   <oai:'+prop+'>'+value+'</oai:'+prop+'>\n'; 
+		if(value.length > 0)
+			textblob += '   <oai:'+prop+'>'+value+'</oai:'+prop+'>\n'; 
 	}	
 
 	var xml2 = [
@@ -185,8 +185,8 @@ function addRecord(row){
 		var colNum = headerData.normalfields[i];
 		var prop = headerData.firstrow[colNum];
 		var value = row[colNum];
-
-		textblob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n'; 
+		if(value.length > 0)
+				textblob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n'; 
 	}
 
 	var xmlpost = [
