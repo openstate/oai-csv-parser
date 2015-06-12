@@ -1,0 +1,5 @@
+UniqueIdentifier,setSpec,setSpec,creator,date,title,subject,subject,description,format,format
+1,set1,, blauw,1-2-1732,Mooie kaart,Dordrecht,winkelstraat,"mooie kaart van Dordrecht,  ssfdds",testlink,test
+2,set1,set2, blauw,1-2-1732,Mooie kaart,Dordrecht,boulevard,"mooie kaart van Dordrecht,  ssfdds",testlink,test
+3,set2,, blauw,1-2-1732,Mooie kaart,Dordrecht,singel,"mooie kaart van Dordrecht,  ssfdds",testlink,test
+4,set2,, blauw,1-2-1732,Mooie kaart,Dordrecht,,"mooie kaart van Dordrecht,  ssfdds",testlink,test

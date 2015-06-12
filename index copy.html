@@ -1,0 +1,296 @@
+<HTML>
+<body>
+	<link rel="stylesheet" href="libs/bootstrap.css">
+<link rel="stylesheet" href="libs/fileinput.css">
+
+<div class="container">
+  <h2>basic XML data</h2>
+  <form role="form" id="csvform">
+    <div class="form-group">
+      <label for="respname">repository Name:</label>
+      <input type="text" class="form-control" id="respname" placeholder="Enter repository name">
+      <label for="baseURL">base URL</label>
+      <input type="text" class="form-control" id="baseURL" placeholder="http://location.of/file.xml">
+      
+      <label for="adminEmail">admin Email</label>
+      <input type="text" class="form-control" id="adminEmail" placeholder="jon@oai.org">
+
+      <label for="inputcsv">CSV file</label>
+      <input id="inputcsv" type="file" class="file" data-preview-file-type="text" >
+    </div>
+    <button type="submit" id="submitbutton" class="btn btn-default" data-loading-text="parsing file!" >Submit</button>
+  </form>
+  <div id="resultpanel" class="panel panel-default collapse">
+  <div class="panel-heading">
+    <h3 class="panel-title">Done</h3>
+  </div>
+  <div class="panel-body">
+    <span id="failed" class="collapse"><span id="failednum"></span> rows in CSV failed because of missing Identifier or timestamp.<br></span>
+
+    <button id="downloadbutton" class="btn btn-default" data-loading-text="parsing file!" >Download file</button>
+  </div>
+</div>
+ </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="libs/jquery.js"></script>
+<script type="text/javascript" src="libs/papaparse.js"></script>
+<script type="text/javascript" src="libs/underscore.js"></script>
+<script type="text/javascript" src="libs/bootstrap.js"></script>
+<script type="text/javascript" src="libs/filereader.js"></script>
+<script type="text/javascript" src="libs/filesaver.js"></script>
+<script type="text/javascript" src="libs/dateformat.js"></script>
+
+<script>
+var CSVData;
+
+
+var IdentifyInfo = {
+	repositoryName:'Demo',
+	baseURL:'http://demo.nl',
+	protocolVersion:'2.0',
+	adminEmail:'jon@oai.org',
+	earliestDatestamp: new Date(),
+	deletedRecord:'no',
+	granularity:'YYYY-MM-DD'
+};
+
+var textblob = ""
+
+$(function(){
+	$( "#csvform" ).submit(function( event ) {
+  		//alert( "Handler for .submit() called." );
+  		event.preventDefault();
+  		$('#submitbutton').button('loading');
+
+
+  		if( $('#respname').val() ) 
+  			IdentifyInfo.repositoryName = $('#respname').val();
+  		if( $('#adminEmail').val() ) 
+  			IdentifyInfo.adminEmail = $('#adminEmail').val();
+  		if( $('#baseURL').val() ) 
+  			IdentifyInfo.baseURL = $('#baseURL').val();
+
+  		setTimeout(function(){
+    		readFileandAppend();
+		}, 100);
+  		
+
+	});
+
+});
+
+var abort = false;
+var failed = 0;
+function readFileandAppend(listElem){
+
+	$('#inputcsv').parse({
+		before: function(file, inputElem)
+		{	
+			var size = file.size;
+  			var percent = 0;
+  			
+			Papa.parse(file, {
+				header: 'true',
+				//worker: ' true',
+				 step: function(row, parser) {
+				 		if(abort)
+				 			parser.abort()
+				 	
+				  	  succes = addRecord(row.data[0]);
+				 	  if(!succes)
+				 	  	failed++;
+
+			 		  var progress = row.meta.cursor;
+				      var newPercent = Math.round(progress / size * 100);
+				      if (newPercent === percent) return;
+				      percent = newPercent;
+				      console.log(percent);
+
+				},
+				complete:function(result){
+					
+				}
+			})
+		},
+		
+		complete: function()
+		{
+			finishAndSaveFile();
+			console.log(failed);
+			$('#submitbutton').button('reset');
+		}
+});
+}
+
+
+
+
+var ListMetadataFormatsArray = [
+	{
+		metadataPrefix:'oai_dc',
+		schema:'http://www.openarchives.org/OAI/1.1/rfc1807.xsd',
+		metadataNamespace:'http://www.openarchives.org/OAI/2.0/oai_dc/'
+	}
+]
+
+var mustHaveCVSheader = ['identifier','timestamp'];
+
+function checkCSVrowForEssentials(row, rowKey) {
+	var missing = "";
+	_.each(mustHaveCVSheader, function(val){
+		if(!_.has(row, val))
+			missing = missing + val + ", ";
+		});
+	if(missing.length > 1){
+		alert('csvrow '+rowKey+' is missing essential fields:' + missing);
+		throw new Error("missing fields");
+	}
+
+}
+
+
+
+function createXMLHeader(){
+var string = "";
+var headerstart = [
+'<?xml version="1.0" encoding="UTF-8"?> ',
+'<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository"  ',
+'            xmlns:oai="http://www.openarchives.org/OAI/2.0/" ',
+'            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ',
+'            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository ',
+'                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">',
+'   <Identify>']
+
+
+var headerend = [
+'   </Identify>',
+'   <ListMetadataFormats>',
+'     <oai:metadataFormat>',
+'       <oai:metadataPrefix>oai_dc</oai:metadataPrefix>',
+'       <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>',
+'       <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/',
+'           </oai:metadataNamespace>',
+'     </oai:metadataFormat>',
+'   </ListMetadataFormats>',
+'   <ListRecords metadataPrefix="oai_dc">']
+
+	for (var i = 0, j = headerstart.length; i < j; i++) {
+		string += headerstart[i] + '\n'  
+	};
+
+	_.each(IdentifyInfo, function (value, prop) {  
+    	string += '   <oai:'+prop+'>'+value+'</oai:'+prop+'>\n'; 
+	});
+
+	for (var i = 0, j = headerend.length; i < j; i++) {
+		string += headerend[i] + '\n'  
+	};
+
+	return string;
+}
+
+function addChildrenToElementWithNamespace(elem, infoObject, namespace){
+	_.each(infoObject, function(val, key){
+		var childElem = (namespace) ? 
+			new marknote.Element(new marknote.QName(namespace, key)) :
+			new marknote.Element(qname);
+			
+			childElem.setText(val);
+
+			elem.addChildElement(childElem);
+		});
+}
+
+
+
+function addRecord(row){
+	if(!row['identifier'] || !row['timestamp'])	{
+		return false;
+	}
+
+	var date = new Date(row['timestamp']);
+	
+	if ( date < IdentifyInfo['earliestDatestamp'] ){
+		IdentifyInfo['earliestDatestamp'] = date;
+	}
+
+	var xml = [
+		'<oai:record> ' ,
+		' <oai:header> ',
+		'  <oai:identifier>oai:'+row['identifier']+'</oai:identifier>',
+		'  <oai:datestamp>'+date.format('isoDate')+'</oai:datestamp> ',
+		' </oai:header> ' ,
+		' <oai:metadata> ' ,
+		'  <oai_dc:dc ' ,
+		'   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" ' ,
+		'   xmlns:dc="http://purl.org/dc/elements/1.1/" ' ,
+		'   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ' ,
+		'   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ ' ,
+		'   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> ' ]
+	
+	for (var i = 0, j = xml.length; i < j; i++) {
+		textblob += xml[i] + '\n'  
+	};
+
+	delete row['identifier'];
+	delete row['timestamp'];
+
+	if(!row['format'] && !row['timestamp'])	{
+
+
+
+	_.each(row, function (value, prop) {  
+    	textblob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n'; 
+	});
+
+	var xmlpost = [
+		'  </oai_dc:dc> ' ,
+		'  </oai:metadata> ' ,
+		'   </oai:record>' ]
+
+	
+	for (var i = 0, j = xmlpost.length; i < j; i++) {
+		textblob += xmlpost[i] + '\n'  
+	};
+	return true;
+}
+
+
+
+finishAndSaveFile = function () {
+   IdentifyInfo['earliestDatestamp'] = IdentifyInfo['earliestDatestamp'].format('isoDate');
+   header = createXMLHeader();
+   textblob = header + textblob;
+   textblob += '  </ListRecords>\n' +
+  				'</Repository>'
+
+  	var blob = new Blob([textblob], {type: "text/plain;charset=utf-8"});
+
+  	$('#resultpanel').show();
+  	if(failed > 0){
+  		$('#failednum').html(failed);
+  		$('#failed').show();
+  	}
+
+
+  	$('#downloadbutton').click( function(){
+  		saveAs(blob, IdentifyInfo['repositoryName'] +".xml");
+  	});
+
+	
+  };
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<body>
+<link rel="stylesheet" href="libs/bootstrap.css">
+<link rel="stylesheet" href="libs/fileinput.css">
+
+<div class="container">
+  <h2>basic XML data</h2>
+  <div id="howdoesitwork">
+    <h3>How does it work</h3>
+    Make a inventory of your collection in excel or simmilar software. <br>
+    Save as a .CSV(comma seperated value) file. Uplaod here and download the XML file.<br>
+    <h4>Rules:</h4>
+    First colum MUST be a unique identiefier for your item. fieldname should be <i>UniqueIdentifier</i><br>
+    The rest of the colums must be one of the following:
+    <ul>
+      <li>setSpec</li><li>title</li><li>creator</li><li>subject</li><li>description</li>
+      <li>contribitor</li><li>publisher</li><li>date</li><li>type</li><li>format</li><li>identifier</li>
+      <li>source</li><li>language</li><li>relation</li><li>coverage</li><li>rights</li>
+    </ul>
+    You can use the same field multiple times, so you can have multiple colums called subject, if youre items cover multiple subjects.<br>
+    It is not adviced to have multiple use the fields title and discription multiple times.
+
+  </div>
+  <form role="form" id="csvform">
+    <div class="form-group">
+      <label for="respname">repository Name:</label>
+      <input type="text" class="form-control" id="respname" placeholder="Enter repository name">
+      <label for="baseURL">base URL</label>
+      <input type="text" class="form-control" id="baseURL" placeholder="http://location.of/file.xml">
+      
+      <label for="adminEmail">admin Email</label>
+      <input type="text" class="form-control" id="adminEmail" placeholder="jon@oai.org">
+
+      <label for="inputcsv">CSV file</label>
+      <input id="inputcsv" type="file" class="file" data-preview-file-type="text" >
+    </div>
+    <button type="submit" id="submitbutton" class="btn btn-default" data-loading-text="parsing file!" >Submit</button>
+  </form>
+  <div id="resultpanel" class="panel panel-default collapse">
+  <div class="panel-heading">
+    <h3 class="panel-title">Done</h3>
+  </div>
+  <div class="panel-body">
+    <span id="failed" class="collapse"><span id="failednum"></span> rows in CSV failed because of missing Identifier or timestamp.<br></span>
+
+    <button id="downloadbutton" class="btn btn-default" data-loading-text="parsing file!" >Download file</button>
+  </div>
+</div>
+  <div id="errorpanel" class="panel panel-default collapse">
+  <div class="panel-heading">
+    <h3 class="panel-title">Error</h3>
+  </div>
+  <div class="panel-body">
+    Your CSV contains errors:
+      <ul id="errorlist"> </ul>
+  </div>
+</div>
+ </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="libs/jquery.js"></script>
+<script type="text/javascript" src="libs/papaparse.js"></script>
+<script type="text/javascript" src="libs/underscore.js"></script>
+<script type="text/javascript" src="libs/bootstrap.js"></script>
+<script type="text/javascript" src="libs/filereader.js"></script>
+<script type="text/javascript" src="libs/filesaver.js"></script>
+<script type="text/javascript" src="libs/dateformat.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

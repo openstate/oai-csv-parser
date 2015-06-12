@@ -1,0 +1,1307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository" 
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
+                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">
+  <Identify>
+    <oai:repositoryName>Demo repository</oai:repositoryName>
+    <oai:baseURL>http://purl.oclc.org/NET/ugent/lib/srepod/dor2.ugent.be/gateway/vb2.xml</oai:baseURL>
+    <oai:protocolVersion>2.0</oai:protocolVersion>
+    <oai:adminEmail>jondoe@oai.org</oai:adminEmail>
+    <oai:earliestDatestamp>2002-09-19</oai:earliestDatestamp>
+    <oai:deletedRecord>no</oai:deletedRecord>
+    <oai:granularity>YYYY-MM-DD</oai:granularity>
+  </Identify>
+  <ListMetadataFormats>
+    <oai:metadataFormat>
+      <oai:metadataPrefix>oai_dc</oai:metadataPrefix>
+      <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>
+      <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/
+          </oai:metadataNamespace>
+    </oai:metadataFormat>
+    <oai:metadataFormat>
+      <oai:metadataPrefix>oai_rfc1807</oai:metadataPrefix>
+      <oai:schema>http://www.openarchives.org/OAI/1.1/rfc1807.xsd</oai:schema>
+      <oai:metadataNamespace>http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt
+           </oai:metadataNamespace>
+    </oai:metadataFormat>
+  </ListMetadataFormats>
+  <ListRecords metadataPrefix="oai_dc">
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/0112019</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/0112023</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/0112025</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120112</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120113</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120114</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120115</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120116</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120117</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120118</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120119</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120120</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120121</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120122</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120123</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120124</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120125</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120126</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120127</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120128</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120129</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120130</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120131</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120132</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120133</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120134</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120135</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120136</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120137</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120138</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120139</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120140</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120141</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120142</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120143</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120144</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120145</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120146</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120147</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+<oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120148</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+
+  <oai:record> 
+     <oai:header>
+<oai:identifier>oai:arXiv:cs/01120149</oai:identifier>        <oai:datestamp>2001-12-14</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+          xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+          xmlns:dc="http://purl.org/dc/elements/1.1/" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+          http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Using Structural Metadata to Localize Experience of 
+                   Digital Content</dc:title> 
+         <dc:creator>Dushay, Naomi</dc:creator>
+         <dc:subject>Digital Libraries</dc:subject> 
+         <dc:description>With the increasing technical sophistication of
+             both information consumers and providers, there is 
+             increasing demand for more meaningful experiences of digital 
+             information. We present a framework that separates digital 
+             object experience, or rendering, from digital object storage 
+             and manipulation, so the rendering can be tailored to 
+             particular communities of users.
+         </dc:description> 
+         <dc:description>Comment: 23 pages including 2 appendices, 
+             8 figures</dc:description> 
+         <dc:date>2001-12-14</dc:date>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>  
+   <oai:record>
+     <oai:header>
+<oai:identifier>oai:perseus:Perseus:text:1999.02.00847</oai:identifier>       <oai:datestamp>2002-05-01</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+           xmlns:dc="http://purl.org/dc/elements/1.1/" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+           http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Opera Minora</dc:title>
+         <dc:creator>Cornelius Tacitus</dc:creator>
+         <dc:type>text</dc:type>
+         <dc:source>Opera Minora. Cornelius Tacitus. Henry Furneaux. 
+          Clarendon Press. Oxford. 1900.</dc:source>
+         <dc:language>latin</dc:language>
+         <dc:identifier>http://www.perseus.tufts.edu/cgi-bin/ptext?
+           doc=Perseus:text:1999.02.0084</dc:identifier>
+       </oai_dc:dc>
+     </oai:metadata>
+   </oai:record>
+   <oai:record>
+     <oai:header>
+<oai:identifier>oai:perseus:Perseus:text:1999.02.00847</oai:identifier>       <oai:datestamp>2002-05-01</oai:datestamp>
+     </oai:header>
+     <oai:metadata>
+       <oai_dc:dc 
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+           xmlns:dc="http://purl.org/dc/elements/1.1/" 
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+           xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+           http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+         <dc:title>Germany and its Tribes</dc:title>
+         <dc:creator>Tacitus</dc:creator>
+         <dc:type>text</dc:type>
+         <dc:source>Complete Works of Tacitus. Tacitus. Alfred John Church. 
+          William Jackson Brodribb. Lisa Cerrato. edited for Perseus. 
+          New York: Random House, Inc. Random House, Inc. reprinted 1942.
+           </dc:source>
+         <dc:language>english</dc:language>
+         <dc:identifier>http://www.perseus.tufts.edu/cgi-bin/ptext?
+          doc=Perseus:text:1999.02.0083</dc:identifier>
+       </oai_dc:dc>
+       </oai:metadata>
+   </oai:record>
+  </ListRecords>
+</Repository>
