@@ -36,12 +36,13 @@
    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
    <dc:creator>Jan Jansen</dc:creator>
    <dc:date>1732-01-15</dc:date>
-   <dc:title>Kaart van Amsterdam</dc:title>
-   <dc:description>Amsterdam en omgeving. Inclusief een zeer fraaie afbeelding van de haven.</dc:description>
+   <dc:title>Map of Amsterdam</dc:title>
+   <dc:description>City and surrounding, including a nice illustration of the harbor</dc:description>
    <dc:coverage>Amsterdam</dc:coverage>
-   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:subject>city overview</dc:subject>
+   <dc:subject>harbor</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>link/naar/server/WFG001000001_024.jpg</dc:identifier>
+   <dc:identifier>http://ink/to/server/WFG001000001_024.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -60,12 +61,12 @@
    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
    <dc:creator>Piet Hein</dc:creator>
    <dc:date>1768-06-27</dc:date>
-   <dc:title>Kaart van Gouda</dc:title>
-   <dc:description>Zeer uitgebreide kaart van Gaude inclusief gedetailleerde legenda</dc:description>
+   <dc:title>Map of Gouda</dc:title>
+   <dc:description>Extensive map of Gouda with detailed legend</dc:description>
    <dc:coverage>Gouda</dc:coverage>
-   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>link/naar/server/WFG001000001_025.jpg</dc:identifier>
+   <dc:identifier>http://ink/to/server/WFG001000001_025.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -84,12 +85,12 @@
    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
    <dc:creator>Jan Smit</dc:creator>
    <dc:date>1801-03-19</dc:date>
-   <dc:title>Kaart van Rotterdam</dc:title>
-   <dc:description>gedetailleerde kaart met geïllustreerde kanalen door de stad</dc:description>
+   <dc:title>Map of Rotterdam</dc:title>
+   <dc:description>City overview with illustrated canals</dc:description>
    <dc:coverage>Rotterdam</dc:coverage>
-   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>link/naar/server/WFG001000001_026.jpg</dc:identifier>
+   <dc:identifier>http://ink/to/server/WFG001000001_026.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -108,12 +109,13 @@
    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
    <dc:creator>Koning Keizer</dc:creator>
    <dc:date>1701-02-08</dc:date>
-   <dc:title>Kaart van Gorinchem</dc:title>
-   <dc:description>Stad omgeven door stervormige verdedegingswerken</dc:description>
+   <dc:title>Map of Gorinchem</dc:title>
+   <dc:description>City surrounded with defensive star structure</dc:description>
    <dc:coverage>Gorinchem</dc:coverage>
-   <dc:subject>stadsoverzicht</dc:subject>
-   <dc:publisher> blauw2</dc:publisher>
-   <dc:identifier>link/naar/server/WFG001000001_027.jpg</dc:identifier>
+   <dc:subject>city overview</dc:subject>
+   <dc:subject>harbor</dc:subject>
+   <dc:publisher> blauw</dc:publisher>
+   <dc:identifier>http://ink/to/server/WFG001000001_027.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -132,12 +134,12 @@
    http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
    <dc:creator>Willem de Vliet</dc:creator>
    <dc:date>1698-05-20</dc:date>
-   <dc:title>encyclopediepagina van Schiedam</dc:title>
-   <dc:description>Kaart van Schiedam met uitloop naar de Maas, op twee paginas van een encyclopedie</dc:description>
+   <dc:title>encyclopediapage of Schiedam</dc:title>
+   <dc:description>2 pages depicting Schiedam and its harbor area</dc:description>
    <dc:coverage>Schiedam</dc:coverage>
-   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>link/naar/server/WFG001000001_028.jpg</dc:identifier>
+   <dc:identifier>http://ink/to/server/WFG001000001_028.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 

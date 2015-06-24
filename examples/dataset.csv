@@ -1,6 +1,6 @@
-UniqueIdentifier,creator,date,title,description,coverage,subject,publisher,identifier,format
-WFG001000001_024,Jan Jansen,1732-01-15,Kaart van Amsterdam,Amsterdam en omgeving. Inclusief een zeer fraaie afbeelding van de haven.,Amsterdam,stadsoverzicht, blauw,link/naar/server/WFG001000001_024.jpg,image/jpg
-WFG001000001_025,Piet Hein,1768-06-27,Kaart van Gouda,Zeer uitgebreide kaart van Gaude inclusief gedetailleerde legenda,Gouda,stadsoverzicht, blauw,link/naar/server/WFG001000001_025.jpg,image/jpg
-WFG001000001_026,Jan Smit,1801-03-19,Kaart van Rotterdam,gedetailleerde kaart met geïllustreerde kanalen door de stad,Rotterdam,stadsoverzicht, blauw,link/naar/server/WFG001000001_026.jpg,image/jpg
-WFG001000001_027,Koning Keizer,1701-02-08,Kaart van Gorinchem,Stad omgeven door stervormige verdedegingswerken,Gorinchem,stadsoverzicht, blauw2,link/naar/server/WFG001000001_027.jpg,image/jpg
-WFG001000001_028,Willem de Vliet,1698-05-20,encyclopediepagina van Schiedam,"Kaart van Schiedam met uitloop naar de Maas, op twee paginas van een encyclopedie",Schiedam,stadsoverzicht, blauw,link/naar/server/WFG001000001_028.jpg,image/jpg
+UniqueIdentifier,creator,date,title,description,coverage,subject,subject,publisher,identifier,format
+WFG001000001_024,Jan Jansen,1732-01-15,Map of Amsterdam,"City and surrounding, including a nice illustration of the harbor",Amsterdam,city overview,harbor, blauw,http://ink/to/server/WFG001000001_024.jpg,image/jpg
+WFG001000001_025,Piet Hein,1768-06-27,Map of Gouda,Extensive map of Gouda with detailed legend,Gouda,city overview,, blauw,http://ink/to/server/WFG001000001_025.jpg,image/jpg
+WFG001000001_026,Jan Smit,1801-03-19,Map of Rotterdam,City overview with illustrated canals,Rotterdam,city overview,, blauw,http://ink/to/server/WFG001000001_026.jpg,image/jpg
+WFG001000001_027,Koning Keizer,1701-02-08,Map of Gorinchem,City surrounded with defensive star structure,Gorinchem,city overview,harbor, blauw,http://ink/to/server/WFG001000001_027.jpg,image/jpg
+WFG001000001_028,Willem de Vliet,1698-05-20,encyclopediapage of Schiedam,2 pages depicting Schiedam and its harbor area,Schiedam,city overview,, blauw,http://ink/to/server/WFG001000001_028.jpg,image/jpg

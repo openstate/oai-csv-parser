@@ -115,8 +115,9 @@ function readFileandAppend(listElem){
 
                           succes = addRecord(row.data[0]);
                           if(!succes)
-                            failedRows.push({num:countRow + 1, reason:"no UniqueIdentifier(is the row empty?"});
+                            failedRows.push({num:countRow + 1, reason:"no UniqueIdentifier (is the row empty?)"});
 
+                            
                           /*var progress = row.meta.cursor;
                           var newPercent = Math.round(progress / size * 100);
                           if (newPercent === percent) return;
@@ -259,7 +260,7 @@ finishAndSaveFile = function (failedrows) {
     if(failed > 0){
         $('#failednum').html(failed);
         $('#failedrows').html(failedrowstring);
-        //$('.failed').show();
+        $('.failed').show();
     }
 
     $('#downloadbutton').click( function(){
