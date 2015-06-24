@@ -17,3 +17,14 @@ li{
   display:inline;
   width:33%;
 }
+
+#downloadbutton {
+	margin:15px 0;
+}
+
+
+.failedtable td{
+	padding: 5px;
+	border: 1px solid;
+
+}

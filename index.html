@@ -21,18 +21,25 @@
       <label for="inputcsv">CSV file</label>
       <input id="inputcsv" type="file" class="file" data-preview-file-type="text" >
     </div>
-    <button type="submit" id="submitbutton" class="btn btn-default" data-loading-text="parsing file!" >Submit</button>
+    <button type="submit" id="submitbutton" class="btn btn-primary" data-loading-text="parsing file!" >Submit</button>
   </form>
   <div id="resultpanel" class="panel panel-default collapse">
   <div class="panel-heading">
     <h3 class="panel-title">Done</h3>
   </div>
   <div class="panel-body">
-    <span id="failed" class="collapse"><span id="failednum"></span> rows in CSV failed because of missing UniqueIdentifier.<br>
-    Did you remove the newlines at the end of the file?
-    </span>
+    <div class="collapse failed">
+      <span class="label label-warning">Warning</span>
+      <span id="failednum"></span> rows in CSV failed, for row numbers and reason see table below.
+    </div>
 
-    <button id="downloadbutton" class="btn btn-default" data-loading-text="parsing file!" >Download file</button>
+    <button id="downloadbutton" class="btn btn-primary" data-loading-text="parsing file!" >Download file</button><br>
+
+    <div class="collapse failed">
+      <table class="failed failedtable" id="failedtable" class="collapse"><tr><td>Row</td><td>Reason:</td></tr> 
+      </table>
+      If Rownumbers seem off, check if al quotes are closed!
+    </div>
   </div>
 </div>
   <div id="errorpanel" class="panel panel-default collapse">
@@ -40,7 +47,7 @@
     <h3 class="panel-title">Error</h3>
   </div>
   <div class="panel-body">
-    Your CSV contains errors:
+    Your CSV contains the following errors:
       <ul id="errorlist"> </ul>
   </div>
   </div>
@@ -56,6 +63,12 @@
     </ul>
 
     You can use the same field multiple times, for instance you can have multiple colums called subject, this could be usefull if youre items cover multiple subjects.<br>
+    <h3>Examples</h3>
+    Download a example <a href="examples/dataset.csv">CSV file</a>. <br>
+    See example <a href="examples/demo-output.xml" >output</a>. <br>
+    <br>
+    <br>
+    <br>
   </div>
 </div>
 </div>

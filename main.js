@@ -81,7 +81,7 @@ function createXMLHeader(){
 //read the CSV file and append to the textblob
 function readFileandAppend(listElem){
     var abort = false;
-    var failedRows = 0;
+    var failedRows = [];
     $('#inputcsv').parse({
         before: function(file, inputElem)
         {
@@ -93,6 +93,15 @@ function readFileandAppend(listElem){
             Papa.parse(file, {
                 //using step the parser is able to parse bigger files.
                 step: function(row, parser) {
+                     console.log(row, countRow);
+                     console.log("Row errors:",row.errors );
+                     if(row.errors){
+                        _.each(row.errors, function(error){
+                            failedRows.push({num:countRow + 1, reason:error.message});
+                        });
+                        
+                     }
+
                      if(countRow === 0){
                         
                         //check the header
@@ -101,23 +110,28 @@ function readFileandAppend(listElem){
                             parser.abort();
                         }
                       }
-                      if(abort)
-                            parser.abort();
 
-                      if(countRow > 1){
+                      if(countRow > 0){
+
                           succes = addRecord(row.data[0]);
                           if(!succes)
-                            failedRows++;
+                            failedRows.push({num:countRow + 1, reason:"no UniqueIdentifier(is the row empty?"});
 
-                          var progress = row.meta.cursor;
+                          /*var progress = row.meta.cursor;
                           var newPercent = Math.round(progress / size * 100);
                           if (newPercent === percent) return;
                           percent = newPercent;
-                          console.log(percent);
+                          console.log(percent);*/
                       }
                       countRow++;
                 }
             });
+        },
+        error: function(err, file, inputElem, reason)
+        {
+            console.log(err, inputElem, reason);
+            // executed if an error occurs while loading the file,
+            // or if before callback aborted for some reason
         },
         
         complete: function()
@@ -209,7 +223,7 @@ function addRecord(row){
         var colNum = headerData.fields[i];
         var prop = headerData.firstrow[colNum];
         var value = row[colNum];
-        if(value.length > 0)
+        if(value && value.length > 0)
             textblob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n';
     }
 
@@ -224,9 +238,15 @@ function addRecord(row){
 }
 
 //bundle everything and save xml
-finishAndSaveFile = function (failed) {
-   
-   header = createXMLHeader();
+finishAndSaveFile = function (failedrows) {
+  
+   var failed = failedrows.length;
+   var header = createXMLHeader();
+   var failedrowstring = "";
+
+   _.each(failedrows, function(row){
+        $('#failedtable').append('<tr><td>'+row.num+'</td><td>'+row.reason+'</td><tr>');
+   });
    
    textblob = header + textblob;
    
@@ -238,7 +258,8 @@ finishAndSaveFile = function (failed) {
     $('#resultpanel').show();
     if(failed > 0){
         $('#failednum').html(failed);
-        $('#failed').show();
+        $('#failedrows').html(failedrowstring);
+        //$('.failed').show();
     }
 
     $('#downloadbutton').click( function(){

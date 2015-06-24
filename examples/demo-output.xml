@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository"  
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
+                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">
+   <Identify>
+   <oai:repositoryName>Demo</oai:repositoryName>
+   <oai:baseURL>http://demo.nl</oai:baseURL>
+   <oai:protocolVersion>2.0</oai:protocolVersion>
+   <oai:adminEmail>jon@oai.org</oai:adminEmail>
+   <oai:earliestDatestamp>2015-06-24</oai:earliestDatestamp>
+   <oai:deletedRecord>no</oai:deletedRecord>
+   <oai:granularity>YYYY-MM-DD</oai:granularity>
+   </Identify>
+   <ListMetadataFormats>
+     <oai:metadataFormat>
+       <oai:metadataPrefix>oai_dc</oai:metadataPrefix>
+       <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>
+       <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/
+           </oai:metadataNamespace>
+     </oai:metadataFormat>
+   </ListMetadataFormats>
+   <ListRecords metadataPrefix="oai_dc">
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>WFG001000001_024</oai:identifier>
+  <oai:datestamp>2015-06-24</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>Jan Jansen</dc:creator>
+   <dc:date>1732-01-15</dc:date>
+   <dc:title>Kaart van Amsterdam</dc:title>
+   <dc:description>Amsterdam en omgeving. Inclusief een zeer fraaie afbeelding van de haven.</dc:description>
+   <dc:coverage>Amsterdam</dc:coverage>
+   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:publisher> blauw</dc:publisher>
+   <dc:identifier>link/naar/server/WFG001000001_024.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>WFG001000001_025</oai:identifier>
+  <oai:datestamp>2015-06-24</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>Piet Hein</dc:creator>
+   <dc:date>1768-06-27</dc:date>
+   <dc:title>Kaart van Gouda</dc:title>
+   <dc:description>Zeer uitgebreide kaart van Gaude inclusief gedetailleerde legenda</dc:description>
+   <dc:coverage>Gouda</dc:coverage>
+   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:publisher> blauw</dc:publisher>
+   <dc:identifier>link/naar/server/WFG001000001_025.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>WFG001000001_026</oai:identifier>
+  <oai:datestamp>2015-06-24</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>Jan Smit</dc:creator>
+   <dc:date>1801-03-19</dc:date>
+   <dc:title>Kaart van Rotterdam</dc:title>
+   <dc:description>gedetailleerde kaart met geïllustreerde kanalen door de stad</dc:description>
+   <dc:coverage>Rotterdam</dc:coverage>
+   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:publisher> blauw</dc:publisher>
+   <dc:identifier>link/naar/server/WFG001000001_026.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>WFG001000001_027</oai:identifier>
+  <oai:datestamp>2015-06-24</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>Koning Keizer</dc:creator>
+   <dc:date>1701-02-08</dc:date>
+   <dc:title>Kaart van Gorinchem</dc:title>
+   <dc:description>Stad omgeven door stervormige verdedegingswerken</dc:description>
+   <dc:coverage>Gorinchem</dc:coverage>
+   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:publisher> blauw2</dc:publisher>
+   <dc:identifier>link/naar/server/WFG001000001_027.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>WFG001000001_028</oai:identifier>
+  <oai:datestamp>2015-06-24</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>Willem de Vliet</dc:creator>
+   <dc:date>1698-05-20</dc:date>
+   <dc:title>encyclopediepagina van Schiedam</dc:title>
+   <dc:description>Kaart van Schiedam met uitloop naar de Maas, op twee paginas van een encyclopedie</dc:description>
+   <dc:coverage>Schiedam</dc:coverage>
+   <dc:subject>stadsoverzicht</dc:subject>
+   <dc:publisher> blauw</dc:publisher>
+   <dc:identifier>link/naar/server/WFG001000001_028.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+  </ListRecords>
+</Repository>
