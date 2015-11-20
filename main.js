@@ -47,6 +47,8 @@ $(function(){
     });
 
 });
+
+
 //create the static repository header.
 function createXMLHeader(){
     var string = "";
@@ -87,7 +89,9 @@ function readFileandAppend(listElem){
     var abort = false;
     var failedRows = [];
     var numOfCols;
-    $('#inputcsv').parse({
+    var filename = $('#inputcsv').val();
+    var extention = filename.split(".").pop();
+    var parseconfig = {
         before: function(file, inputElem)
         {
             var size = file.size;
@@ -162,8 +166,17 @@ function readFileandAppend(listElem){
                 showErrors(errors);
             }
         }
-});
+    }
+
+    if(extention == 'csv'){
+        Papa.parse(parseconfig);
+    }
+
+
+
 }
+
+
 
 //check if the headerRow of the CSV conforms to OAI
 var checkHeader = function(headerrow){
@@ -340,3 +353,32 @@ showErrors = function(){
             );
     });
 };
+
+
+//experimental
+
+function handleFile(e) {
+  var files = e.target.files;
+  var i,f;
+  for (i = 0, f = files[i]; i != files.length; ++i) {
+    var reader = new FileReader();
+    var name = f.name;
+    reader.onload = function(e) {
+      var data = e.target.result;
+
+      var workbook = XLSX.read(data, {type: 'binary'});
+
+      var sheetNameList = workbook.SheetNames;
+      var worksheet = workbook.Sheets[sheetNameList[0]];
+      console.log(sheetNameList);
+
+      csvString = XLSX.utils.sheet_to_csv(worksheet);
+
+      Papa.parse(csvString);
+
+      /* DO SOMETHING WITH workbook HERE */
+    };
+    reader.readAsBinaryString(f);
+  }
+}
+document.getElementById('inputexcel').addEventListener('change', handleFile, false);
