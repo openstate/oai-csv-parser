@@ -169,11 +169,30 @@ function readFileandAppend(listElem){
     }
 
     if(extention == 'csv'){
-        Papa.parse(parseconfig);
+        $('#inputcsv').parse(parseconfig);
     }
 
+    if(extention == 'xlsx'){
+        var file = document.getElementById('inputcsv').files[0];
+        var reader = new FileReader();
+        var name = file.name;
+        console.log(name);
+        reader.onload = function(e) {
+          var data = e.target.result;
 
+          var workbook = XLSX.read(data, {type: 'binary'});
 
+          var sheetNameList = workbook.SheetNames;
+          var worksheet = workbook.Sheets[sheetNameList[0]];
+          console.log(sheetNameList);
+
+          csvString = XLSX.utils.sheet_to_csv(worksheet);
+          Papa.parse(csvString, parseconfig);
+
+        };
+        reader.readAsBinaryString(file);
+        //
+    }
 }
 
 
@@ -357,7 +376,13 @@ showErrors = function(){
 
 //experimental
 
-function handleFile(e) {
+function handleXMLFile(file, callback) {
+    var csvresult;
+    
+
+}
+
+function handleXMLFile_old(e) {
   var files = e.target.files;
   var i,f;
   for (i = 0, f = files[i]; i != files.length; ++i) {
@@ -381,4 +406,4 @@ function handleFile(e) {
     reader.readAsBinaryString(f);
   }
 }
-document.getElementById('inputexcel').addEventListener('change', handleFile, false);
+document.getElementById('inputexcel').addEventListener('change', handleXMLFile, false);
