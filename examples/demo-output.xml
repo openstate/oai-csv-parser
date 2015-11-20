@@ -5,11 +5,11 @@
             xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
                                 http://www.openarchives.org/OAI/2.0/static-repository.xsd">
    <Identify>
-   <oai:repositoryName>Demo</oai:repositoryName>
-   <oai:baseURL>http://demo.nl</oai:baseURL>
+   <oai:repositoryName>My Dataset</oai:repositoryName>
+   <oai:baseURL>http://www.demo.nl/dataset/</oai:baseURL>
    <oai:protocolVersion>2.0</oai:protocolVersion>
-   <oai:adminEmail>jon@oai.org</oai:adminEmail>
-   <oai:earliestDatestamp>2015-06-24</oai:earliestDatestamp>
+   <oai:adminEmail>test@demo.nl</oai:adminEmail>
+   <oai:earliestDatestamp>2015-11-20</oai:earliestDatestamp>
    <oai:deletedRecord>no</oai:deletedRecord>
    <oai:granularity>YYYY-MM-DD</oai:granularity>
    </Identify>
@@ -25,7 +25,7 @@
 <oai:record> 
  <oai:header> 
   <oai:identifier>WFG001000001_024</oai:identifier>
-  <oai:datestamp>2015-06-24</oai:datestamp>
+  <oai:datestamp>2015-11-20</oai:datestamp>
  </oai:header>
  <oai:metadata>
   <oai_dc:dc
@@ -42,7 +42,7 @@
    <dc:subject>city overview</dc:subject>
    <dc:subject>harbor</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>http://ink/to/server/WFG001000001_024.jpg</dc:identifier>
+   <dc:identifier>WFG001000001_024.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -50,7 +50,7 @@
 <oai:record> 
  <oai:header> 
   <oai:identifier>WFG001000001_025</oai:identifier>
-  <oai:datestamp>2015-06-24</oai:datestamp>
+  <oai:datestamp>2015-11-20</oai:datestamp>
  </oai:header>
  <oai:metadata>
   <oai_dc:dc
@@ -66,7 +66,7 @@
    <dc:coverage>Gouda</dc:coverage>
    <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>http://ink/to/server/WFG001000001_025.jpg</dc:identifier>
+   <dc:identifier>WFG001000001_025.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -74,7 +74,7 @@
 <oai:record> 
  <oai:header> 
   <oai:identifier>WFG001000001_026</oai:identifier>
-  <oai:datestamp>2015-06-24</oai:datestamp>
+  <oai:datestamp>2015-11-20</oai:datestamp>
  </oai:header>
  <oai:metadata>
   <oai_dc:dc
@@ -90,7 +90,7 @@
    <dc:coverage>Rotterdam</dc:coverage>
    <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>http://ink/to/server/WFG001000001_026.jpg</dc:identifier>
+   <dc:identifier>WFG001000001_026.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -98,7 +98,7 @@
 <oai:record> 
  <oai:header> 
   <oai:identifier>WFG001000001_027</oai:identifier>
-  <oai:datestamp>2015-06-24</oai:datestamp>
+  <oai:datestamp>2015-11-20</oai:datestamp>
  </oai:header>
  <oai:metadata>
   <oai_dc:dc
@@ -115,7 +115,7 @@
    <dc:subject>city overview</dc:subject>
    <dc:subject>harbor</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>http://ink/to/server/WFG001000001_027.jpg</dc:identifier>
+   <dc:identifier>WFG001000001_027.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 
@@ -123,7 +123,7 @@
 <oai:record> 
  <oai:header> 
   <oai:identifier>WFG001000001_028</oai:identifier>
-  <oai:datestamp>2015-06-24</oai:datestamp>
+  <oai:datestamp>2015-11-20</oai:datestamp>
  </oai:header>
  <oai:metadata>
   <oai_dc:dc
@@ -139,7 +139,7 @@
    <dc:coverage>Schiedam</dc:coverage>
    <dc:subject>city overview</dc:subject>
    <dc:publisher> blauw</dc:publisher>
-   <dc:identifier>http://ink/to/server/WFG001000001_028.jpg</dc:identifier>
+   <dc:identifier>WFG001000001_028.jpg</dc:identifier>
    <dc:format>image/jpg</dc:format>
   </oai_dc:dc> 
   </oai:metadata> 

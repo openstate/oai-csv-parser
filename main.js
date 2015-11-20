@@ -10,16 +10,19 @@ var IdentifyInfo = {
     repositoryName:'Demo',
     baseURL:'http://demo.nl',
     protocolVersion:'2.0',
-    adminEmail:'jon@oai.org',
+    adminEmail:'demo@oai.org',
     earliestDatestamp: now,
     deletedRecord:'no',
     granularity:'YYYY-MM-DD'
 };
 
+
 var textblob = "";
 
+var itemDateGranularity;
 
 $(function(){
+
     $( "#csvform" ).submit(function( event ) {
 
         event.preventDefault();
@@ -33,6 +36,8 @@ $(function(){
         if( $('#baseURL').val() )
             IdentifyInfo.baseURL = $('#baseURL').val();
 
+        itemDateGranularity = $( "#granularity").val();
+
         //the parser blocks DOM updates, so give dom some  
         //time to update.
         setTimeout(function(){
@@ -42,7 +47,6 @@ $(function(){
     });
 
 });
-
 //create the static repository header.
 function createXMLHeader(){
     var string = "";
@@ -82,6 +86,7 @@ function createXMLHeader(){
 function readFileandAppend(listElem){
     var abort = false;
     var failedRows = [];
+    var numOfCols;
     $('#inputcsv').parse({
         before: function(file, inputElem)
         {
@@ -93,8 +98,9 @@ function readFileandAppend(listElem){
             Papa.parse(file, {
                 //using step the parser is able to parse bigger files.
                 step: function(row, parser) {
-                     console.log(row, countRow);
-                     console.log("Row errors:",row.errors );
+                     // console.log(row, countRow);
+                     // console.log("Row errors:",row.errors );
+
                      if(row.errors){
                         _.each(row.errors, function(error){
                             failedRows.push({num:countRow + 1, reason:error.message});
@@ -109,20 +115,31 @@ function readFileandAppend(listElem){
                         if (!headerOk){
                             parser.abort();
                         }
+                        numOfCols = row.data[0].length;
                       }
 
                       if(countRow > 0){
 
-                          succes = addRecord(row.data[0]);
-                          if(!succes)
-                            failedRows.push({num:countRow + 1, reason:"no UniqueIdentifier (is the row empty?)"});
-
-                            
-                          /*var progress = row.meta.cursor;
-                          var newPercent = Math.round(progress / size * 100);
-                          if (newPercent === percent) return;
-                          percent = newPercent;
-                          console.log(percent);*/
+                           numOfColsInRow = row.data[0].length
+                           if(numOfColsInRow < 2){
+                                failedRows.push({num:countRow + 1, reason:'empty row', mesType: 'error'});
+                           }
+                           else if(numOfCols != numOfColsInRow){
+                                //rows need to be the same length
+                                failedRows.push({num:countRow + 1, reason:'incorrect number of colums ('+row.data[0].length+'/'+numOfCols+')', mesType: 'error'});
+                           }
+                           else{
+                                rowstatus = addRecord(row.data[0]);
+                               if(rowstatus.mesType == 'error'){
+                                    failedRows.push({num:countRow + 1, reason:rowstatus.message, mesType: rowstatus.mesType});
+                               }
+                               
+                               if(rowstatus.mesType == 'warning'){
+                                   for (var i = 0; i < rowstatus.warnings.length; i++) {
+                                       failedRows.push({num:countRow + 1, reason:rowstatus.warnings[i], mesType: rowstatus.mesType});
+                                   };
+                               }
+                            }    
                       }
                       countRow++;
                 }
@@ -195,12 +212,17 @@ function addToBlob(blob, textarray){
 
 //add one Item to the blob
 function addRecord(row){
+    var warnings = [];
     
     //check for identifier and fail if not present.
     var id = row[0];
     if(id.length < 1)   {
-        return false;
+        return {
+            mesType:'error',
+            message: "no UniqueIdentifier"
+        }
     }
+    var tempBlob = "";
 
     var xml = [
         '<oai:record> ' ,
@@ -217,15 +239,18 @@ function addRecord(row){
         '   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> '
     ];
 
-    textblob = addToBlob(textblob, xml);
+    tempBlob = addToBlob(tempBlob, xml);
 
     //for every headerfield check if it exits and append to blob.
     for (var i = 0, j = headerData.fields.length; i < j; i++) {
         var colNum = headerData.fields[i];
         var prop = headerData.firstrow[colNum];
         var value = row[colNum];
+        if(prop == 'date' && !checkDateFormatting(value))
+            warnings.push('invalid date string "'+value+'"');
+
         if(value && value.length > 0)
-            textblob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n';
+            tempBlob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n';
     }
 
     var xmlend = [
@@ -233,9 +258,30 @@ function addRecord(row){
         '  </oai:metadata> ' ,
         '   </oai:record>' ];
     
-    textblob = addToBlob(textblob, xmlend);
-    
-    return true;
+    tempBlob = addToBlob(tempBlob, xmlend);
+
+    //only add the tempblob to the textblob if there are no errors.
+    textblob += tempBlob;
+    if(warnings.length > 0){
+        return {
+            mesType:'warning',
+            warnings:warnings
+        }
+    }
+    else {
+        return {
+            mesType:'succes',
+        }
+    }
+}
+
+checkDateFormatting = function(datestring){
+    var date = new Date(datestring);
+    console.log(datestring, date.getYear());
+    if ( isNaN( date.getYear() ) )
+        return false;
+    else
+        return true;
 }
 
 //bundle everything and save xml
@@ -245,8 +291,17 @@ finishAndSaveFile = function (failedrows) {
    var header = createXMLHeader();
    var failedrowstring = "";
 
+   //remove previous results
+   $('#failedtable tr:not(:first)').remove();
    _.each(failedrows, function(row){
-        $('#failedtable').append('<tr><td>'+row.num+'</td><td>'+row.reason+'</td><tr>');
+        var label = "";
+
+        if(row.mesType == 'warning')
+            label = '<span class="label label-warning">Warning</span>';
+        else if(row.mesType == 'error')
+            label = '<span class="label label-danger">Error</span>';
+
+        $('#failedtable').append('<tr><td>'+row.num+'</td><td>'+label+'</td><td>'+row.reason+'</td><tr>');
    });
    
    textblob = header + textblob;
@@ -261,12 +316,19 @@ finishAndSaveFile = function (failedrows) {
         $('#failednum').html(failed);
         $('#failedrows').html(failedrowstring);
         $('.failed').show();
+        $('.succes').hide();
+    } else {
+        $('.failed').hide();
+        $('.succes').show();
     }
 
     $('#downloadbutton').click( function(){
+        console.log('trying to save file');
+        console.log(textblob);
         saveAs(blob, IdentifyInfo['repositoryName'] +".xml");
     });
 };
+
 
 showErrors = function(){
     $('#errorpanel').show();

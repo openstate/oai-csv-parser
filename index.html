@@ -21,6 +21,7 @@
 
       <label for="inputcsv">CSV file</label>
       <input id="inputcsv" type="file" class="file" data-preview-file-type="text" >
+
     </div>
     <button type="submit" id="submitbutton" class="btn btn-primary" data-loading-text="parsing file!" >Submit</button>
   </form>
@@ -31,14 +32,20 @@
   <div class="panel-body">
     <div class="collapse failed">
       <span class="label label-warning">Warning</span>
-      <span id="failednum"></span> rows in CSV failed, for row numbers and reason see table below.
+      <span id="failednum"></span> rows in CSV failed or have warnings.
+    </div>
+
+    <div class="collapse succes">
+       Parsed without errors
     </div>
 
     <button id="downloadbutton" class="btn btn-primary" data-loading-text="parsing file!" >Download file</button><br>
 
     <div class="collapse failed">
-      <table class="failed failedtable" id="failedtable" class="collapse"><tr><td>Row</td><td>Reason:</td></tr> 
+
+      <table class="failed failedtable" id="failedtable" class="collapse"><tr><td>Row</td><td>Type</td><td>Reason</td></tr> 
       </table>
+      Rows with warnings are still added to the output, rows with errors are not.<br>
       If Rownumbers seem off, check if al quotes are closed!
     </div>
   </div>
