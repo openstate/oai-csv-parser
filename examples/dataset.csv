@@ -1,6 +1,5 @@
-UniqueIdentifier,creator,date,title,description,coverage,subject,subject,publisher,identifier,format
-WFG001000001_024,Jan Jansen,1732-01-15,Map of Amsterdam,"City and surrounding, including a nice illustration of the harbor",Amsterdam,city overview,harbor, blauw,WFG001000001_024.jpg,image/jpg
-WFG001000001_025,Piet Hein,1768-06-27,Map of Gouda,Extensive map of Gouda with detailed legend,Gouda,city overview,, blauw,WFG001000001_025.jpg,image/jpg
-WFG001000001_026,Jan Smit,1801-03-19,Map of Rotterdam,City overview with illustrated canals,Rotterdam,city overview,, blauw,WFG001000001_026.jpg,image/jpg
-WFG001000001_027,Koning Keizer,1701-02-08,Map of Gorinchem,City surrounded with defensive star structure,Gorinchem,city overview,harbor, blauw,WFG001000001_027.jpg,image/jpg
-WFG001000001_028,Willem de Vliet,1698-05-20,encyclopediapage of Schiedam,2 pages depicting Schiedam and its harbor area,Schiedam,city overview,, blauw,WFG001000001_028.jpg,image/jpg
+"UniqueIdentifier","creator","date","title","description","subject","subject","publisher","identifier","format"
+"20150417GCCS-Unplugged-63","OSF","2015-04-17","Vinton Cerf on GCCS-Unplugged","Vinton Cerf gives key note on Global Conference on CyberSpace 2015","Vinton Cerf","Conference","OSF","20150417GCCS-Unplugged-63.jpg","image/jpg"
+"npo2013","OSF","2013-11-09","Hackathon Publieke Omroep ","Picture of the Dutch public broadcasting hackathon","NPO","Hackathon","OSF","npo201.jpg","image/jpg"
+"os20150925173523","OSF","2015-09-15","NPO-backstage App Competition ","Audience watching the ceremony at the conclusion off the NPO-backstage App Competition ","NPO-backstage","Competition","OSF","os20150925173523.jpg","image/jpg"
+"os20151114201949","OSF","2015-11-14","NPO Backstage Hackathon","Audience laughing at App pitches at the NPO-backstage Hackathon","NPO-backstage","Hackathon","OSF","os20151114201949.jpg","image/jpg"

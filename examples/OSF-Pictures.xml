@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository"  
+            xmlns:oai="http://www.openarchives.org/OAI/2.0/" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository 
+                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">
+   <Identify>
+   <oai:repositoryName>OSF Fotos</oai:repositoryName>
+   <oai:baseURL>http://search.opencultuurdata.nl/parser/examples/exampleset/</oai:baseURL>
+   <oai:protocolVersion>2.0</oai:protocolVersion>
+   <oai:adminEmail>contact@openstate.eu</oai:adminEmail>
+   <oai:earliestDatestamp>2015-11-27</oai:earliestDatestamp>
+   <oai:deletedRecord>no</oai:deletedRecord>
+   <oai:granularity>YYYY-MM-DD</oai:granularity>
+   </Identify>
+   <ListMetadataFormats>
+     <oai:metadataFormat>
+       <oai:metadataPrefix>oai_dc</oai:metadataPrefix>
+       <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>
+       <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/
+           </oai:metadataNamespace>
+     </oai:metadataFormat>
+   </ListMetadataFormats>
+   <ListRecords metadataPrefix="oai_dc">
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>20150417GCCS-Unplugged-63</oai:identifier>
+  <oai:datestamp>2015-11-27</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>OSF</dc:creator>
+   <dc:date>2015-04-17</dc:date>
+   <dc:title>Vinton Cerf on GCCS-Unplugged</dc:title>
+   <dc:description>Vinton Cerf gives key note on Global Conference on CyberSpace 2015</dc:description>
+   <dc:subject>Vinton Cerf</dc:subject>
+   <dc:subject>Conference</dc:subject>
+   <dc:publisher>OSF</dc:publisher>
+   <dc:identifier>20150417GCCS-Unplugged-63.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>npo2013</oai:identifier>
+  <oai:datestamp>2015-11-27</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>OSF</dc:creator>
+   <dc:date>2013-11-09</dc:date>
+   <dc:title>Hackathon Publieke Omroep </dc:title>
+   <dc:description>Picture of the Dutch public broadcasting hackathon</dc:description>
+   <dc:subject>NPO</dc:subject>
+   <dc:subject>Hackathon</dc:subject>
+   <dc:publisher>OSF</dc:publisher>
+   <dc:identifier>npo201.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>os20150925173523</oai:identifier>
+  <oai:datestamp>2015-11-27</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>OSF</dc:creator>
+   <dc:date>2015-09-15</dc:date>
+   <dc:title>NPO-backstage App Competition </dc:title>
+   <dc:description>Audience watching the ceremony at the conclusion off the NPO-backstage App Competition </dc:description>
+   <dc:subject>NPO-backstage</dc:subject>
+   <dc:subject>Competition</dc:subject>
+   <dc:publisher>OSF</dc:publisher>
+   <dc:identifier>os20150925173523.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+<oai:record> 
+ <oai:header> 
+  <oai:identifier>os20151114201949</oai:identifier>
+  <oai:datestamp>2015-11-27</oai:datestamp>
+ </oai:header>
+ <oai:metadata>
+  <oai_dc:dc
+   xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" 
+   xmlns:dc="http://purl.org/dc/elements/1.1/" 
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+   xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ 
+   http://www.openarchives.org/OAI/2.0/oai_dc.xsd"> 
+   <dc:creator>OSF</dc:creator>
+   <dc:date>2015-11-14</dc:date>
+   <dc:title>NPO Backstage Hackathon</dc:title>
+   <dc:description>Audience laughing at App pitches at the NPO-backstage Hackathon</dc:description>
+   <dc:subject>NPO-backstage</dc:subject>
+   <dc:subject>Hackathon</dc:subject>
+   <dc:publisher>OSF</dc:publisher>
+   <dc:identifier>os20151114201949.jpg</dc:identifier>
+   <dc:format>image/jpg</dc:format>
+  </oai_dc:dc> 
+  </oai:metadata> 
+   </oai:record>
+  </ListRecords>
+</Repository>

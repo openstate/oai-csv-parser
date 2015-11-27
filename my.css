@@ -4,13 +4,13 @@
 
 
 
-ul{
+#howdoesitwork ul{
   width:600px;
   margin-bottom:20px;
   overflow:hidden;
   border-top:1px solid #ccc;
 }
-li{
+#howdoesitwork li{
   line-height:1.5em;
   border-bottom:1px solid #ccc;
   float:left;

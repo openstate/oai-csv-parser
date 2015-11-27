@@ -24,14 +24,13 @@ var IdentifyInfo = {
     deletedRecord:'no',
     granularity:'YYYY-MM-DD'
 };
-//
+
 var itemDateGranularity;
 
 $(function(){
 
     $( "#csvform" ).submit(function( event ) {
-
-        event.preventDefault();
+           event.preventDefault();
         $('#submitbutton').button('loading');
 
         //override the adjustable IdentifyInfo fields
@@ -223,6 +222,8 @@ function addRecord(row, rowNum){
     }
     var tempBlob = "";
 
+
+    console.log(row[0].toString())
     var xml = [
         '<oai:record> ' ,
         ' <oai:header> ',
