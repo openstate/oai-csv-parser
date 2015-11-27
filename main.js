@@ -21,8 +21,14 @@ var IdentifyInfo = {
 };
 
 var textblob = "";
-
 var itemDateGranularity;
+
+var failedRows;
+var headerRowCount;
+
+window.onerror = function(error, url, line) {
+    
+};
 
 $(function(){
 
@@ -90,12 +96,14 @@ function createXMLHeader(){
 function checkFileTypeAndParse(){
     var filename = $('#inputcsv').val();
     var extention = filename.split(".").pop();
-    
+
+    failedRows = [];
+
     if(extention == 'csv'){
         parseCSVFile();
     }
 
-    if(extention == 'xlsx'){
+    if(['xlsx','xls'].indexOf(extention) > -1 ){
         parseExcelFile();
     }
 }
@@ -103,65 +111,33 @@ function checkFileTypeAndParse(){
 //read the CSV file and append to the textblob
 function parseCSVFile(){
     var abort = false;
-    var failedRows = [];
-    var numOfCols;
-    errors = [];
+    
 
     $('#inputcsv').parse({
         before: function(file, inputElem)
         {
-            var size = file.size;
-            var percent = 0;
-            var countRow = 0;
-            
+            var rowNumber = 1;            
             
             Papa.parse(file, {
                 //using step the parser is able to parse bigger files.
                 step: function(row, parser) {
-                     // console.log(row, countRow);
-                     // console.log("Row errors:",row.errors );
+                    console.log(row, rowNumber);
 
-                     if(row.errors){
-                        _.each(row.errors, function(error){
-                            failedRows.push({num:countRow + 1, reason:error.message});
-                        });
-                        
-                     }
-
-                     if(countRow === 0){
-                        
+                    if(rowNumber === 1){
                         //check the header
-                        var headerOk = checkHeader(row.data[0]);
-                        if (!headerOk){
-                            parser.abort();
+                        if (checkHeader(row.data[0]))
+                            console.log('header passed');
+                        else
+                            parser.abort(); 
+                    }
+                    
+                    if(rowNumber > 1){
+                        if(checkColumnCount(row, rowNumber)){
+                            console.log('row '+rowNumber+' passed');
+                            addRecord(row.data[0], rowNumber);
                         }
-                        numOfCols = row.data[0].length;
-                      }
-
-                      if(countRow > 0){
-
-                           numOfColsInRow = row.data[0].length
-                           if(numOfColsInRow < 2){
-                                failedRows.push({num:countRow + 1, reason:'empty row', mesType: 'error'});
-                           }
-                           else if(numOfCols != numOfColsInRow){
-                                //rows need to be the same length
-                                failedRows.push({num:countRow + 1, reason:'incorrect number of colums ('+row.data[0].length+'/'+numOfCols+')', mesType: 'error'});
-                           }
-                           else{
-                                rowstatus = addRecord(row.data[0]);
-                               if(rowstatus.mesType == 'error'){
-                                    failedRows.push({num:countRow + 1, reason:rowstatus.message, mesType: rowstatus.mesType});
-                               }
-                               
-                               if(rowstatus.mesType == 'warning'){
-                                   for (var i = 0; i < rowstatus.warnings.length; i++) {
-                                       failedRows.push({num:countRow + 1, reason:rowstatus.warnings[i], mesType: rowstatus.mesType});
-                                   };
-                               }
-                            }    
-                      }
-                      countRow++;
+                    }
+                    rowNumber++;
                 }
             });
         },
@@ -174,17 +150,13 @@ function parseCSVFile(){
         
         complete: function()
         {
-            if(errors.length === 0){
-                finishAndSaveFile(failedRows);
-                $('#submitbutton').button('reset');
-            }else {
-                $('#submitbutton').button('reset');
-                showErrors(errors);
-            }
+            finishAndSaveFile();
+            $('#submitbutton').button('reset');                    
+            
         }
-    });
-   
-}
+    });   
+};
+
 
 function parseExcelFile(){
     var file = document.getElementById('inputcsv').files[0];
@@ -192,27 +164,55 @@ function parseExcelFile(){
     var name = file.name;
     console.log(name);
     reader.onload = function(e) {
-      var data = e.target.result;
+        var data = e.target.result;
 
-      var workbook = XLSX.read(data, {type: 'binary'});
+        var workbook = XLSX.read(data, {type: 'binary'});
 
-      var sheetNameList = workbook.SheetNames;
-      var worksheet = workbook.Sheets[sheetNameList[0]];
-      console.log(sheetNameList);
+        var sheetNameList = workbook.SheetNames;
+        var worksheet = workbook.Sheets[sheetNameList[0]];
+        console.log(sheetNameList);
 
-      csvString = XLSX.utils.sheet_to_csv(worksheet);
-      console.log(csvString);
-      Papa.parse(csvString, parseconfig);
+        var data = XLSX.utils.sheet_to_row_object_array(worksheet, {header:1});
+
+        if (checkHeader(data[0]))
+            console.log('header passed');
+        else
+            return;
+
+        for (var i = 1; i < data.length; i++) {
+            if(checkColumnCount(data[i], i+1)){
+                console.log('row '+(i+1)+' passed');
+                addRecord(data[i], i+1);
+            }
+        };
+
+        finishAndSaveFile();
+        $('#submitbutton').button('reset');     
 
     };
     reader.readAsBinaryString(file);
 }
 
 
-
+//check if Column Number is correct
+function checkColumnCount(row, rowNum){
+   var numOfColsInRow = row.length;
+   if(numOfColsInRow < 2){
+        failedRows.push({num:rowNum, reason:'empty row', mesType: 'error'});
+   }
+   else if(headerRowCount != numOfColsInRow){
+        //rows need to be the same length
+        failedRows.push({num:rowNum, reason:'incorrect number of colums ('+numOfColsInRow+'/'+headerRowCount+')', mesType: 'error'});
+   } 
+   else {
+       return true;
+   }
+}
 
 //check if the headerRow of the CSV conforms to OAI
 var checkHeader = function(headerrow){
+     var errors = [];
+
     //the allowed fields of Dubln, core.
     var allowedfieldsDC = [
         'title','creator','subject','description',
@@ -220,6 +220,7 @@ var checkHeader = function(headerrow){
         'source','language','relation','coverage','rights'
     ];
     
+    headerRowCount = headerrow.length;
 
     headerData = {
         firstrow: headerrow,
@@ -241,10 +242,10 @@ var checkHeader = function(headerrow){
         }
     }
 
+    showErrors(errors);
+
     if(errors.length === 0)
         return true;
-    else
-        return false;
 };
 
 
@@ -257,16 +258,13 @@ function addToBlob(blob, textarray){
 
 
 //add one Item to the blob
-function addRecord(row){
-    var warnings = [];
+function addRecord(row, rowNum){
     
     //check for identifier and fail if not present.
     var id = row[0];
     if(id.length < 1)   {
-        return {
-            mesType:'error',
-            message: "no UniqueIdentifier"
-        }
+        failedRows.push({num:rowNum + 1, reason:"no UniqueIdentifier", mesType:'error' });
+        return;
     }
     var tempBlob = "";
 
@@ -293,8 +291,8 @@ function addRecord(row){
         var prop = headerData.firstrow[colNum];
         var value = row[colNum];
         if(prop == 'date' && !checkDateFormatting(value))
-            warnings.push('invalid date string "'+value+'"');
-
+            failedRows.push({num:rowNum + 1, reason:'invalid date string "'+value+'"', mesType: 'warning'});
+  
         if(value && value.length > 0)
             tempBlob += '   <dc:'+prop+'>'+value+'</dc:'+prop+'>\n';
     }
@@ -307,18 +305,7 @@ function addRecord(row){
     tempBlob = addToBlob(tempBlob, xmlend);
 
     //only add the tempblob to the textblob if there are no errors.
-    textblob += tempBlob;
-    if(warnings.length > 0){
-        return {
-            mesType:'warning',
-            warnings:warnings
-        }
-    }
-    else {
-        return {
-            mesType:'succes',
-        }
-    }
+    textblob += tempBlob;   
 }
 
 function checkDateFormatting(datestring){
@@ -331,15 +318,17 @@ function checkDateFormatting(datestring){
 }
 
 //bundle everything and save xml
-function finishAndSaveFile (failedrows) {
+function finishAndSaveFile () {
   
-   var failed = failedrows.length;
+   var failed = failedRows.length;
    var header = createXMLHeader();
-   var failedrowstring = "";
+   var failedRowstring = "";
 
    //remove previous results
    $('#failedtable tr:not(:first)').remove();
-   _.each(failedrows, function(row){
+
+   //print the failed rows
+   _.each(failedRows, function(row){
         var label = "";
 
         if(row.mesType == 'warning')
@@ -360,17 +349,17 @@ function finishAndSaveFile (failedrows) {
     $('#resultpanel').show();
     if(failed > 0){
         $('#failednum').html(failed);
-        $('#failedrows').html(failedrowstring);
+        $('#failedrows').html(failedRowstring);
         $('.failed').show();
         $('.succes').hide();
     } else {
+        $('#errorpanel').hide();
         $('.failed').hide();
         $('.succes').show();
     }
 
     $('#downloadbutton').click( function(){
         console.log('trying to save file');
-        console.log(textblob);
         saveAs(blob, IdentifyInfo['repositoryName'] +".xml");
     });
 };
