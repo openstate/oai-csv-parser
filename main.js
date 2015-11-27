@@ -5,6 +5,11 @@
 //headerData contains all the information about the first row of the CSV
 var headerData, errors;
 
+var textblob = "";
+
+var failedRows;
+var headerRowCount;
+
 //now is the creationdata of the OAI respository
 var now = new Date();
 now = now.format('isoDate');
@@ -19,16 +24,8 @@ var IdentifyInfo = {
     deletedRecord:'no',
     granularity:'YYYY-MM-DD'
 };
-
-var textblob = "";
+//
 var itemDateGranularity;
-
-var failedRows;
-var headerRowCount;
-
-window.onerror = function(error, url, line) {
-    
-};
 
 $(function(){
 
@@ -57,42 +54,7 @@ $(function(){
 
 });
 
-
-//create the static repository header.
-function createXMLHeader(){
-    var string = "";
-    var headerstart = [
-    '<?xml version="1.0" encoding="UTF-8"?> ',
-    '<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository"  ',
-    '            xmlns:oai="http://www.openarchives.org/OAI/2.0/" ',
-    '            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ',
-    '            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository ',
-    '                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">',
-    '   <Identify>'];
-
-    string = addToBlob(string, headerstart);
-
-    _.each(IdentifyInfo, function (value, prop) {
-        string += '   <oai:'+prop+'>'+value+'</oai:'+prop+'>\n';
-    });
-
-    var headerend = [
-    '   </Identify>',
-    '   <ListMetadataFormats>',
-    '     <oai:metadataFormat>',
-    '       <oai:metadataPrefix>oai_dc</oai:metadataPrefix>',
-    '       <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>',
-    '       <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/',
-    '           </oai:metadataNamespace>',
-    '     </oai:metadataFormat>',
-    '   </ListMetadataFormats>',
-    '   <ListRecords metadataPrefix="oai_dc">'];
-
-    string = addToBlob(string, headerend);
-
-    return string;
-}
-
+//parse file based on extention.
 function checkFileTypeAndParse(){
     var filename = $('#inputcsv').val();
     var extention = filename.split(".").pop();
@@ -101,23 +63,22 @@ function checkFileTypeAndParse(){
 
     if(extention == 'csv'){
         parseCSVFile();
-    }
-
-    if(['xlsx','xls'].indexOf(extention) > -1 ){
+    } 
+    else if(['xlsx','xls'].indexOf(extention) > -1 ){
         parseExcelFile();
+    }
+    else {
+        console.log('wrong file type')
     }
 }
 
 //read the CSV file and append to the textblob
 function parseCSVFile(){
-    var abort = false;
-    
-
+    var error = false;
     $('#inputcsv').parse({
         before: function(file, inputElem)
         {
             var rowNumber = 1;            
-            
             Papa.parse(file, {
                 //using step the parser is able to parse bigger files.
                 step: function(row, parser) {
@@ -127,12 +88,14 @@ function parseCSVFile(){
                         //check the header
                         if (checkHeader(row.data[0]))
                             console.log('header passed');
-                        else
-                            parser.abort(); 
+                        else {
+                            parser.abort();
+                            error = true; 
+                        }
                     }
                     
                     if(rowNumber > 1){
-                        if(checkColumnCount(row, rowNumber)){
+                        if(checkColumnCount(row.data[0], rowNumber)){
                             console.log('row '+rowNumber+' passed');
                             addRecord(row.data[0], rowNumber);
                         }
@@ -149,15 +112,17 @@ function parseCSVFile(){
         },
         
         complete: function()
-        {
-            finishAndSaveFile();
-            $('#submitbutton').button('reset');                    
+        {   
+            if(!error){
+                finishAndSaveFile();
+                $('#submitbutton').button('reset');  
+            }               
             
         }
     });   
 };
 
-
+//parse a Excel File
 function parseExcelFile(){
     var file = document.getElementById('inputcsv').files[0];
     var reader = new FileReader();
@@ -193,8 +158,7 @@ function parseExcelFile(){
     reader.readAsBinaryString(file);
 }
 
-
-//check if Column Number is correct
+//check if Number of Columns is correct
 function checkColumnCount(row, rowNum){
    var numOfColsInRow = row.length;
    if(numOfColsInRow < 2){
@@ -242,20 +206,11 @@ var checkHeader = function(headerrow){
         }
     }
 
-    showErrors(errors);
-
     if(errors.length === 0)
         return true;
+    else
+        showErrors(errors);
 };
-
-
-function addToBlob(blob, textarray){
-    for (var i = 0, j = textarray.length; i < j; i++) {
-        blob += textarray[i] + '\n';
-    }
-    return blob;
-}
-
 
 //add one Item to the blob
 function addRecord(row, rowNum){
@@ -317,11 +272,46 @@ function checkDateFormatting(datestring){
         return true;
 }
 
+//create the static repository header.
+function createXMLHeader(){
+    var string = "";
+    var headerstart = [
+    '<?xml version="1.0" encoding="UTF-8"?> ',
+    '<Repository xmlns="http://www.openarchives.org/OAI/2.0/static-repository"  ',
+    '            xmlns:oai="http://www.openarchives.org/OAI/2.0/" ',
+    '            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ',
+    '            xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/static-repository ',
+    '                                http://www.openarchives.org/OAI/2.0/static-repository.xsd">',
+    '   <Identify>'];
+
+    string = addToBlob(string, headerstart);
+
+    _.each(IdentifyInfo, function (value, prop) {
+        string += '   <oai:'+prop+'>'+value+'</oai:'+prop+'>\n';
+    });
+
+    var headerend = [
+    '   </Identify>',
+    '   <ListMetadataFormats>',
+    '     <oai:metadataFormat>',
+    '       <oai:metadataPrefix>oai_dc</oai:metadataPrefix>',
+    '       <oai:schema>http://www.openarchives.org/OAI/2.0/oai_dc.xsd</oai:schema>',
+    '       <oai:metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/',
+    '           </oai:metadataNamespace>',
+    '     </oai:metadataFormat>',
+    '   </ListMetadataFormats>',
+    '   <ListRecords metadataPrefix="oai_dc">'];
+
+    string = addToBlob(string, headerend);
+
+    return string;
+}
+
 //bundle everything and save xml
 function finishAndSaveFile () {
+   var header = createXMLHeader();
   
    var failed = failedRows.length;
-   var header = createXMLHeader();
    var failedRowstring = "";
 
    //remove previous results
@@ -339,8 +329,7 @@ function finishAndSaveFile () {
         $('#failedtable').append('<tr><td>'+row.num+'</td><td>'+label+'</td><td>'+row.reason+'</td><tr>');
    });
    
-   textblob = header + textblob;
-   
+   textblob = header + textblob;   
    textblob += '  </ListRecords>\n' +
                 '</Repository>';
 
@@ -364,8 +353,14 @@ function finishAndSaveFile () {
     });
 };
 
+function addToBlob(blob, textarray){
+    for (var i = 0, j = textarray.length; i < j; i++) {
+        blob += textarray[i] + '\n';
+    }
+    return blob;
+}
 
-function showErrors(){
+function showErrors(errors){
     $('#errorpanel').show();
     $('#resultpanel').hide();
 
@@ -375,39 +370,5 @@ function showErrors(){
             );
     });
 };
-
-
-//experimental
-
-function handleXMLFile(file, callback) {
-    var csvresult;
-    
-
-}
-
-function handleXMLFile_old(e) {
-  var files = e.target.files;
-  var i,f;
-  for (i = 0, f = files[i]; i != files.length; ++i) {
-    var reader = new FileReader();
-    var name = f.name;
-    reader.onload = function(e) {
-      var data = e.target.result;
-
-      var workbook = XLSX.read(data, {type: 'binary'});
-
-      var sheetNameList = workbook.SheetNames;
-      var worksheet = workbook.Sheets[sheetNameList[0]];
-      console.log(sheetNameList);
-
-      csvString = XLSX.utils.sheet_to_csv(worksheet);
-
-      Papa.parse(csvString);
-
-      /* DO SOMETHING WITH workbook HERE */
-    };
-    reader.readAsBinaryString(f);
-  }
-}
 
 })();
