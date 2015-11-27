@@ -1,3 +1,7 @@
+(function() {
+
+"use strict";
+
 //headerData contains all the information about the first row of the CSV
 var headerData, errors;
 
@@ -15,7 +19,6 @@ var IdentifyInfo = {
     deletedRecord:'no',
     granularity:'YYYY-MM-DD'
 };
-
 
 var textblob = "";
 
@@ -41,7 +44,7 @@ $(function(){
         //the parser blocks DOM updates, so give dom some  
         //time to update.
         setTimeout(function(){
-            readFileandAppend();
+            checkFileTypeAndParse();
         }, 100);
 
     });
@@ -84,20 +87,33 @@ function createXMLHeader(){
     return string;
 }
 
+function checkFileTypeAndParse(){
+    var filename = $('#inputcsv').val();
+    var extention = filename.split(".").pop();
+    
+    if(extention == 'csv'){
+        parseCSVFile();
+    }
+
+    if(extention == 'xlsx'){
+        parseExcelFile();
+    }
+}
+
 //read the CSV file and append to the textblob
-function readFileandAppend(listElem){
+function parseCSVFile(){
     var abort = false;
     var failedRows = [];
     var numOfCols;
-    var filename = $('#inputcsv').val();
-    var extention = filename.split(".").pop();
-    var parseconfig = {
+    errors = [];
+
+    $('#inputcsv').parse({
         before: function(file, inputElem)
         {
             var size = file.size;
             var percent = 0;
             var countRow = 0;
-            errors = [];
+            
             
             Papa.parse(file, {
                 //using step the parser is able to parse bigger files.
@@ -166,34 +182,32 @@ function readFileandAppend(listElem){
                 showErrors(errors);
             }
         }
-    }
-
-    if(extention == 'csv'){
-        $('#inputcsv').parse(parseconfig);
-    }
-
-    if(extention == 'xlsx'){
-        var file = document.getElementById('inputcsv').files[0];
-        var reader = new FileReader();
-        var name = file.name;
-        console.log(name);
-        reader.onload = function(e) {
-          var data = e.target.result;
-
-          var workbook = XLSX.read(data, {type: 'binary'});
-
-          var sheetNameList = workbook.SheetNames;
-          var worksheet = workbook.Sheets[sheetNameList[0]];
-          console.log(sheetNameList);
-
-          csvString = XLSX.utils.sheet_to_csv(worksheet);
-          Papa.parse(csvString, parseconfig);
-
-        };
-        reader.readAsBinaryString(file);
-        //
-    }
+    });
+   
 }
+
+function parseExcelFile(){
+    var file = document.getElementById('inputcsv').files[0];
+    var reader = new FileReader();
+    var name = file.name;
+    console.log(name);
+    reader.onload = function(e) {
+      var data = e.target.result;
+
+      var workbook = XLSX.read(data, {type: 'binary'});
+
+      var sheetNameList = workbook.SheetNames;
+      var worksheet = workbook.Sheets[sheetNameList[0]];
+      console.log(sheetNameList);
+
+      csvString = XLSX.utils.sheet_to_csv(worksheet);
+      console.log(csvString);
+      Papa.parse(csvString, parseconfig);
+
+    };
+    reader.readAsBinaryString(file);
+}
+
 
 
 
@@ -307,7 +321,7 @@ function addRecord(row){
     }
 }
 
-checkDateFormatting = function(datestring){
+function checkDateFormatting(datestring){
     var date = new Date(datestring);
     console.log(datestring, date.getYear());
     if ( isNaN( date.getYear() ) )
@@ -317,7 +331,7 @@ checkDateFormatting = function(datestring){
 }
 
 //bundle everything and save xml
-finishAndSaveFile = function (failedrows) {
+function finishAndSaveFile (failedrows) {
   
    var failed = failedrows.length;
    var header = createXMLHeader();
@@ -362,7 +376,7 @@ finishAndSaveFile = function (failedrows) {
 };
 
 
-showErrors = function(){
+function showErrors(){
     $('#errorpanel').show();
     $('#resultpanel').hide();
 
@@ -406,4 +420,5 @@ function handleXMLFile_old(e) {
     reader.readAsBinaryString(f);
   }
 }
-document.getElementById('inputexcel').addEventListener('change', handleXMLFile, false);
+
+})();
